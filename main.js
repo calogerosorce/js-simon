@@ -10,4 +10,13 @@ BONUS:
 Inseriamo la validazione: se l'utente mette due numeri uguali o inserisce cose diverse da numeri lo blocchiamo in qualche modo.
 Se l’utente ha inserito qualcosa di non valido, segnaliamolo visivamente nel form.
 
+Tools:
+-Const
+-Select id
+-SetTimeout
+  D-none i 5 numeri stampati
+  Input
+-AddEventListener
+-Check number input
 */
+
