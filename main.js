@@ -22,6 +22,9 @@ Tools:
 
 const formEl = document.getElementById('form')
 const numberEl = document.querySelectorAll('.number_random')
+const numbCheckEl = document.querySelectorAll('.number_check')
+const textCheckEl = document.querySelectorAll('.text_number')
+const btnEl = document.querySelector('button.btn')
 
 
 for (let i = 0; i < 5; i++) {
@@ -30,4 +33,15 @@ for (let i = 0; i < 5; i++) {
     console.log(numeriCasuali);
 
 }
+
+setTimeout(() => {
+
+    for (let i = 0; i < 5; i++) {
+        numberEl[i].classList.toggle('d-none')
+        numbCheckEl[i].classList.toggle('d-none')
+        textCheckEl[i].classList.toggle('d-none')
+    }
+    btnEl.classList.toggle('d-none')
+}, 3000)
+
 
