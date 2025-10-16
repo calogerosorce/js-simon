@@ -13,6 +13,7 @@ Se l’utente ha inserito qualcosa di non valido, segnaliamolo visivamente nel f
 Tools:
 -Const
 -Select id
+-function random number
 -SetTimeout
   D-none i 5 numeri stampati
   Input
