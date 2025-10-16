@@ -13,11 +13,21 @@ Se l’utente ha inserito qualcosa di non valido, segnaliamolo visivamente nel f
 Tools:
 -Const
 -Select id
--function random number
 -SetTimeout
   D-none i 5 numeri stampati
   Input
 -AddEventListener
 -Check number input
 */
+
+const formEl = document.getElementById('form')
+const numberEl = document.querySelectorAll('.number_random')
+
+
+for (let i = 0; i < 5; i++) {
+    numeriCasuali = Math.floor(Math.random() * 99);
+    numberEl[i].textContent = numeriCasuali
+    console.log(numeriCasuali);
+
+}
 
