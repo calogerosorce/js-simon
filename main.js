@@ -30,8 +30,6 @@ const btnEl = document.querySelector('button.btn')
 for (let i = 0; i < 5; i++) {
     numeriCasuali = Math.floor(Math.random() * 99);
     numberEl[i].textContent = numeriCasuali
-    console.log(numeriCasuali);
-
 }
 
 setTimeout(() => {
@@ -49,17 +47,12 @@ formEl.addEventListener('submit', (event) => {
     event.preventDefault()
     for (let i = 0; i < 5; i++) {
         checkNumb = Number(numbCheckEl[i].value)
-        console.log(checkNumb);
-
     }
-
-
 
     if (numeriCasuali === checkNumb) {
         alert('HAI VINTO!')
     } else {
         alert('HAI PERSO!')
-
     }
 })
 
