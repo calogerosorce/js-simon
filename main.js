@@ -54,6 +54,13 @@ formEl.addEventListener('submit', (event) => {
     } else {
         alert('HAI PERSO!')
     }
+    setTimeout(() => {
+        for (let i = 0; i < 5; i++) {
+            numbCheckEl[i].classList.toggle('d-none')
+            textCheckEl[i].classList.toggle('d-none')
+        }
+        btnEl.classList.toggle('d-none')
+    }, 1000)
 })
 
 
