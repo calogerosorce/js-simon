@@ -45,3 +45,19 @@ setTimeout(() => {
 }, 3000)
 
 
+
+
+formEl.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const numeri = numbCheckEl.value
+    console.log(numeri);
+
+
+
+    if (numeriCasuali === numeri) {
+        alert('HAI VINTO!')
+    } else {
+        alert('HAI PERSO!')
+
+    }
+})
