@@ -42,7 +42,7 @@ setTimeout(() => {
         textCheckEl[i].classList.toggle('d-none')
     }
     btnEl.classList.toggle('d-none')
-}, 3000)
+}, 30000)
 
 
 formEl.addEventListener('submit', (event) => {
