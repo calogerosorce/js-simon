@@ -62,7 +62,7 @@ formEl.addEventListener('submit', (event) => {
         }
     }
 
-    alert(`HAI INDOVINATO QUESTI NUMERI ${result}`)
+    alert(`HAI INDOVINATO QUESTI NUMERI ${result} SONO ${result.length} NUMERI`)
 
     setTimeout(() => {
         for (let i = 0; i < 5; i++) {
