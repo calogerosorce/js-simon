@@ -30,9 +30,14 @@ let casualNum = []
 for (let i = 0; i < numberEl.length; i++) {
     numeriCasuali = Math.floor(Math.random() * 99);
     numberEl[i].textContent = numeriCasuali
-    casualNum.push(numeriCasuali)
+    if (!casualNum.includes(numeriCasuali)) {
+        casualNum.push(numeriCasuali)
+
+    } else {
+        i--;
+    }
 }
-console.log(casualNum);
+
 
 
 setTimeout(() => {
@@ -43,23 +48,21 @@ setTimeout(() => {
         textCheckEl[i].classList.toggle('d-none')
     }
     btnEl.classList.toggle('d-none')
-}, 3000)
+}, 30000)
 
-
+let result = []
 formEl.addEventListener('submit', (event) => {
     event.preventDefault()
     numb = []
     for (let i = 0; i < numbCheckEl.length; i++) {
         checkNumb = Number(numbCheckEl[i].value)
         numb.push(checkNumb)
+        if (casualNum.includes(checkNumb)) {
+            result.push(checkNumb)
+        }
     }
-    console.log(numb);
 
-    if (casualNum === numb) {
-        alert(`HAI VINTO QUESTI ${casualNum} SONO UGUALI A ${numb}`)
-    } else {
-        alert('HAI PERSO')
-    }
+    console.log(result);
 
 
     setTimeout(() => {
