@@ -26,11 +26,14 @@ const numbCheckEl = document.querySelectorAll('.number_check')
 const textCheckEl = document.querySelectorAll('.text_number')
 const btnEl = document.querySelector('button.btn')
 
-
-for (let i = 0; i < 5; i++) {
+let casualNum = []
+for (let i = 0; i < numberEl.length; i++) {
     numeriCasuali = Math.floor(Math.random() * 99);
     numberEl[i].textContent = numeriCasuali
+    casualNum.push(numeriCasuali)
 }
+console.log(casualNum);
+
 
 setTimeout(() => {
 
@@ -40,20 +43,25 @@ setTimeout(() => {
         textCheckEl[i].classList.toggle('d-none')
     }
     btnEl.classList.toggle('d-none')
-}, 30000)
+}, 3000)
 
 
 formEl.addEventListener('submit', (event) => {
     event.preventDefault()
-    for (let i = 0; i < 5; i++) {
+    numb = []
+    for (let i = 0; i < numbCheckEl.length; i++) {
         checkNumb = Number(numbCheckEl[i].value)
+        numb.push(checkNumb)
+    }
+    console.log(numb);
+
+    if (casualNum === numb) {
+        alert(`HAI VINTO QUESTI ${casualNum} SONO UGUALI A ${numb}`)
+    } else {
+        alert('HAI PERSO')
     }
 
-    if (numeriCasuali === checkNumb) {
-        alert('HAI VINTO!')
-    } else {
-        alert('HAI PERSO!')
-    }
+
     setTimeout(() => {
         for (let i = 0; i < 5; i++) {
             numbCheckEl[i].classList.toggle('d-none')
